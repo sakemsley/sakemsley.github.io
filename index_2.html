@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sean Kemsley</title>
+<meta name="description" content="Sean Kemsley is a PhD candidate in accounting at the University of Texas at Austin, studying taxation with a focus on tax policy. On the 2026-27 academic job market.">
+<link rel="canonical" href="https://seankemsley.com/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Sean Kemsley">
+<meta property="og:description" content="PhD candidate in accounting at the University of Texas at Austin. Taxation, with a focus on tax policy.">
+<meta property="og:url" content="https://seankemsley.com/">
+<meta property="og:image" content="https://seankemsley.com/headshot.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+<style>
+:root{
+  --ground:#FBFAF7;
+  --surface:#FFFFFF;
+  --ink:#141A17;
+  --ink-2:#3D4A44;
+  --ink-3:#6E7C75;
+  --rule:#E3E4DC;
+  --rule-strong:#C7CBC1;
+  --accent:#1F5540;
+  --accent-2:#2E7358;
+  --accent-soft:#EAF0EB;
+  --flag:#8A5A1E;
+  --flag-soft:#F6EEE2;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --measure:64ch;
+  --rail:170px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0F1311;
+    --surface:#161B18;
+    --ink:#EDEFE9;
+    --ink-2:#B9C3BC;
+    --ink-3:#8A958E;
+    --rule:#28302C;
+    --rule-strong:#3B453F;
+    --accent:#7CC5A2;
+    --accent-2:#9BD6B8;
+    --accent-soft:#1A241F;
+    --flag:#D9A867;
+    --flag-soft:#241D12;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0F1311;
+  --surface:#161B18;
+  --ink:#EDEFE9;
+  --ink-2:#B9C3BC;
+  --ink-3:#8A958E;
+  --rule:#28302C;
+  --rule-strong:#3B453F;
+  --accent:#7CC5A2;
+  --accent-2:#9BD6B8;
+  --accent-soft:#1A241F;
+  --flag:#D9A867;
+  --flag-soft:#241D12;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2.5px}
+a:hover{color:var(--accent-2)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+p{margin:0}
+
+.wrap{max-width:1000px;margin:0 auto;padding:0 28px}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:20;
+  background:color-mix(in srgb,var(--ground) 88%,transparent);
+  backdrop-filter:saturate(180%) blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.nav-in{
+  max-width:1000px;margin:0 auto;padding:11px 28px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+}
+.nav-name{font-family:var(--serif);font-size:1.02rem;font-weight:600;letter-spacing:.005em}
+.nav-links{display:flex;gap:20px;flex-wrap:wrap}
+.nav-links a{
+  font-family:var(--mono);font-size:.735rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-3);text-decoration:none;
+}
+.nav-links a:hover{color:var(--accent)}
+@media(max-width:640px){.nav-name{display:none}.nav-in{justify-content:center;padding:10px 20px}}
+
+/* ---------- hero ---------- */
+.hero{padding:64px 0 52px;border-bottom:1px solid var(--rule)}
+.hero-grid{display:grid;grid-template-columns:1fr 172px;gap:44px;align-items:start}
+h1{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(2.5rem,6vw,3.5rem);line-height:1.06;
+  letter-spacing:-.018em;margin:0 0 18px;text-wrap:balance;
+}
+.standfirst{
+  font-family:var(--serif);font-size:1.24rem;line-height:1.55;
+  color:var(--ink-2);max-width:52ch;margin:0 0 26px;
+}
+.standfirst em{font-style:italic;color:var(--ink)}
+.market{
+  display:flex;align-items:center;gap:9px;margin:0 0 22px;
+  font-family:var(--mono);font-size:.745rem;letter-spacing:.045em;color:var(--ink-2);
+}
+.market .dot{
+  width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;
+  box-shadow:0 0 0 3px var(--accent-soft);
+}
+.contact{display:flex;flex-wrap:wrap;gap:9px 10px;align-items:center}
+.contact a,.contact span.todo-chip{
+  font-family:var(--mono);font-size:.755rem;letter-spacing:.05em;
+  padding:5px 11px;border:1px solid var(--rule-strong);border-radius:2px;
+  text-decoration:none;color:var(--ink-2);background:var(--surface);
+}
+.contact a:hover{border-color:var(--accent);color:var(--accent)}
+.contact a.primary{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+:root[data-theme="dark"] .contact a.primary{color:#0F1311}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .contact a.primary{color:#0F1311}}
+.contact a.primary:hover{background:var(--accent-2);border-color:var(--accent-2)}
+
+.portrait{
+  aspect-ratio:4/5;border:1px solid var(--rule-strong);border-radius:2px;
+  background:var(--accent-soft);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  overflow:hidden;
+}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait-initials{font-family:var(--serif);font-size:2.5rem;color:var(--accent);line-height:1}
+.portrait-note{font-family:var(--mono);font-size:.63rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);text-align:center;padding:0 10px}
+@media(max-width:760px){
+  .hero{padding:44px 0 38px}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .portrait{width:132px;order:-1}
+}
+
+/* ---------- sections ---------- */
+.section{padding:52px 0;border-bottom:1px solid var(--rule)}
+.section:last-of-type{border-bottom:0}
+.section-grid{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);gap:36px;align-items:start}
+h2{
+  font-family:var(--mono);font-size:.735rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);
+  margin:0;padding-top:5px;
+}
+.section-body{display:flex;flex-direction:column;gap:34px;min-width:0}
+.lede{font-size:1.02rem;color:var(--ink-2);max-width:var(--measure)}
+.lede strong{color:var(--ink);font-weight:600}
+@media(max-width:760px){
+  .section{padding:38px 0}
+  .section-grid{grid-template-columns:1fr;gap:18px}
+  h2{padding-top:0}
+}
+
+/* ---------- papers ---------- */
+.papers{display:flex;flex-direction:column;gap:30px}
+.group-label{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);padding-bottom:8px;border-bottom:1px solid var(--rule);margin-bottom:4px;
+}
+.paper{display:flex;flex-direction:column;gap:9px;max-width:var(--measure)}
+.paper-flags{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pill{
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;
+  padding:3px 8px;border-radius:2px;white-space:nowrap;
+}
+.pill-jmp{background:var(--accent);color:var(--surface)}
+:root[data-theme="dark"] .pill-jmp{color:#0F1311}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pill-jmp{color:#0F1311}}
+.pill-wp{border:1px solid var(--rule-strong);color:var(--ink-3)}
+.pill-date{font-family:var(--mono);font-size:.7rem;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.paper h3{
+  font-family:var(--serif);font-weight:600;font-size:1.29rem;line-height:1.3;
+  letter-spacing:-.008em;margin:0;text-wrap:balance;
+}
+.paper.featured h3{font-size:1.55rem}
+.authors{font-size:.925rem;color:var(--ink-2)}
+.cite{font-size:.9rem;color:var(--ink-3)}
+.cite em{font-style:italic;color:var(--ink-2)}
+.paper-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:1px}
+.paper-links a{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase}
+.presented{font-family:var(--mono);font-size:.715rem;line-height:1.75;color:var(--ink-3)}
+.presented b{font-weight:500;color:var(--ink-2)}
+
+details.abs{border-top:1px solid var(--rule);padding-top:9px;margin-top:2px}
+details.abs > summary{
+  cursor:pointer;list-style:none;
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--ink-3);display:flex;align-items:center;gap:8px;
+}
+details.abs > summary::-webkit-details-marker{display:none}
+details.abs > summary::before{
+  content:"+";font-size:.95rem;line-height:1;color:var(--accent);width:9px;
+}
+details.abs[open] > summary::before{content:"\2013"}
+details.abs > summary:hover{color:var(--accent)}
+.abs-body{font-size:.955rem;line-height:1.68;color:var(--ink-2);padding-top:10px}
+.abs-body p + p{margin-top:11px}
+.keywords{font-family:var(--mono);font-size:.7rem;color:var(--ink-3);padding-top:10px;letter-spacing:.02em}
+
+/* ---------- teaching ---------- */
+.entries{display:flex;flex-direction:column;gap:22px;max-width:var(--measure)}
+.entry{display:flex;flex-direction:column;gap:4px}
+.entry-top{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;justify-content:space-between}
+.entry h3{font-family:var(--serif);font-size:1.09rem;font-weight:600;margin:0;line-height:1.35}
+.entry-when{font-family:var(--mono);font-size:.715rem;color:var(--ink-3);font-variant-numeric:tabular-nums;white-space:nowrap}
+.entry-where{font-size:.925rem;color:var(--ink-2)}
+.entry-note{font-size:.9rem;color:var(--ink-3)}
+.rating{
+  display:inline-flex;align-items:baseline;gap:7px;margin-top:5px;
+  background:var(--accent-soft);border-radius:2px;padding:5px 10px;align-self:flex-start;
+}
+.rating b{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums}
+.rating span{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+
+.award{
+  max-width:var(--measure);border-left:2px solid var(--accent);
+  padding:2px 0 2px 15px;display:flex;flex-direction:column;gap:2px;
+}
+.award-label{font-family:var(--serif);font-size:1.03rem;font-weight:600;line-height:1.35}
+.award-detail{font-family:var(--mono);font-size:.71rem;letter-spacing:.04em;color:var(--ink-3)}
+
+/* ---------- talks ---------- */
+.talks{border-top:1px solid var(--rule);max-width:var(--measure)}
+.talk{
+  display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;
+  padding:9px 0;border-bottom:1px solid var(--rule);
+}
+.talk-name{font-size:.95rem}
+.talk-name sup{color:var(--accent);font-family:var(--mono);font-size:.62rem}
+.talk-year{font-family:var(--mono);font-size:.78rem;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.legend{font-family:var(--mono);font-size:.68rem;color:var(--ink-3);padding-top:12px}
+.legend sup{color:var(--accent)}
+
+/* ---------- service ---------- */
+.svc{display:flex;flex-direction:column;gap:16px;max-width:var(--measure)}
+.svc-item{display:flex;flex-direction:column;gap:3px}
+.svc-role{font-family:var(--mono);font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3)}
+.svc-detail{font-size:.95rem;color:var(--ink-2)}
+.svc-detail em{font-style:italic}
+
+/* ---------- placeholders ---------- */
+.todo{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;
+  color:var(--flag);background:var(--flag-soft);
+  border:1px dashed var(--flag);border-radius:2px;padding:1px 6px;white-space:nowrap;
+}
+
+/* ---------- footer ---------- */
+footer{padding:34px 0 56px;color:var(--ink-3)}
+.foot-in{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;align-items:center;
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.05em}
+footer a{color:var(--ink-3)}
+footer a:hover{color:var(--accent)}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth;scroll-padding-top:66px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <div class="nav-name">Sean Kemsley</div>
+    <div class="nav-links">
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#talks">Presentations</a>
+      <a href="#service">Service</a>
+      <a href="cv.pdf">CV</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Sean Kemsley</h1>
+      <p class="standfirst">PhD candidate in accounting at the University of Texas at Austin. I study <em>taxation</em>, with a focus on tax policy.</p>
+      <p class="market"><span class="dot" aria-hidden="true"></span>On the 2026&ndash;27 academic job market &middot; PhD expected 2027</p>
+      <div class="contact">
+        <a class="primary" href="cv.pdf">Curriculum vitae</a>
+        <a href="mailto:sean.kemsley@mccombs.utexas.edu">sean.kemsley@mccombs.utexas.edu</a>
+        <a href="https://scholar.google.com/citations?user=hpX9VQ8AAAAJ&amp;hl=en">Google Scholar</a>
+        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3544840">SSRN</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="headshot.jpg" width="760" height="950" alt="Sean Kemsley">
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="section" id="research">
+  <div class="wrap section-grid">
+    <h2>Research</h2>
+    <div class="section-body">
+      <p class="lede">My work asks how tax policy shows up in firm behavior and firm value. Current projects span <strong>corporate taxation</strong>, the <strong>capital market effects of taxation</strong>, <strong>tax evasion</strong>, and <strong>tax theory</strong> — using a mix of analytical modeling and archival methods.</p>
+
+      <div class="papers">
+        <div>
+          <div class="group-label">Job market paper</div>
+          <article class="paper featured">
+            <div class="paper-flags">
+              <span class="pill pill-jmp">Job market paper</span>
+              <span class="pill-date">August 2026</span>
+            </div>
+            <h3>Does Firm-level Slack Affect Firms&rsquo; Responses to Fiscal Policy Shocks? Evidence from Tariff Announcements</h3>
+            <p class="authors">Sean A. Kemsley</p>
+            <details class="abs" open>
+              <summary>Abstract</summary>
+              <div class="abs-body">
+                <p>Macroeconomic research finds that economy-wide slack intensifies the effects of fiscal policy. I investigate whether this result extends to individual firms. To do this, I generate a stylized setting in which firm-level slack (conceptualized as unused productive capacity) results from a limited investment opportunity set. I show that firm value will be more sensitive to fiscal policy shocks under high-slack conditions, especially for contractionary shocks. To test this empirically, I examine stock market response to the &ldquo;Liberation Day&rdquo; tariff announcements, testing whether firm-level slack amplified the stock price reactions for the expected winners and losers of tariff policy.</p>
+                <p>I find that firm-level slack intensifies firms&rsquo; responses to fiscal policy news, and the effect is concentrated in firms facing contractionary shocks. I also find that the results are concentrated in firms with high financial slack, suggesting that both operational and financial slack are incrementally informative about a firm&rsquo;s investment opportunity set. Additionally, I find that a high-quality external information environment softened the impact of the tariffs for high-slack, contractionary firms, while the quality of the internal information environment had no measurable moderating effect, supporting a valuation role rather than real-effects role for information in my setting.</p>
+                <p>As governments continue their use of targeted fiscal policies, my findings should inform policymakers on the distributional effects of fiscal policy across firms. More broadly, these results contribute to a more granular, accounting-based paradigm for understanding the conditions under which fiscal policy is likely to be effective.</p>
+                <p class="keywords">Keywords: fiscal policy, tariffs, tax, slack, information quality</p>
+              </div>
+            </details>
+            <p class="paper-links"><a href="#" data-needs="jmp-pdf">Download PDF</a><a href="#" data-needs="jmp-ssrn">SSRN</a></p>
+          </article>
+        </div>
+
+        <div>
+          <div class="group-label">Working papers</div>
+          <div class="papers">
+            <article class="paper">
+              <div class="paper-flags">
+                <span class="pill pill-wp">Working paper</span>
+                <span class="pill-date">July 2025</span>
+              </div>
+              <h3>Alternative Book-based Taxes and Earnings Management</h3>
+              <p class="authors">with Braden M. Williams</p>
+              <details class="abs">
+                <summary>Abstract</summary>
+                <div class="abs-body">
+                  <p>We create a stylized model of firms&rsquo; earnings management and tax avoidance decisions when taxes are levied on taxable income, and then alternatively levied on book income. The predicted effect of an alternative book-based tax on earnings management depends on the relative importance of scrutiny costs and the tax rates involved. Next, we use a difference-in-differences test to estimate the effect of the Corporate Alternative Minimum Tax (CAMT) on earnings management.</p>
+                  <p>Contrary to pre-passage concerns about increased downward earnings management, we find mixed evidence indicating unchanged or increased upwards earnings management by affected firms. Our model suggests that pre-passage concerns about downward earnings management underappreciated that (1) book-tax scrutiny already exerted indirect downward pressure on earnings management before CAMT, and/or (2) upwardly managed earnings might enjoy preferential tax rates after CAMT. Thus, this study provides a framework to evaluate tax policy that comingles financial accounting measures with traditional tax bases.</p>
+                  <p class="keywords">Keywords: CAMT, book-tax differences, tax avoidance, earnings management</p>
+                </div>
+              </details>
+              <p class="presented"><b>Presented:</b> 2025 FARS Midyear Meeting &middot; 2025 ATA Midyear Meeting &middot; 2025 BYU Accounting Research Symposium &middot; 2025 McCombs PhD Conference</p>
+              <p class="paper-links"><a href="#" data-needs="camt-pdf">Download PDF</a></p>
+            </article>
+
+            <article class="paper">
+              <div class="paper-flags">
+                <span class="pill pill-wp">Working paper</span>
+              </div>
+              <h3>Equity Composition and the Geometry of Valuation</h3>
+              <p class="authors">with Deen Kemsley</p>
+              <details class="abs">
+                <summary>Abstract</summary>
+                <div class="abs-body">
+                  <p>Abnormal-earnings models aggregate retained earnings with contributed capital, treat reallocation as frictionless, and earnings as exogenous. Personal taxation breaks all three. Under the U.S. distribution ordering rule, contributed capital cannot be returned tax-free until all retained earnings have been distributed as taxable dividends. Usually read as burying contributed capital, the rule is what makes the mix matter: reaching that capital requires taxing every retained dollar in front, so equity composition governs divestiture and expected earnings.</p>
+                  <p>Two further results are sharp. Optimal payout is discrete: divest below the after-tax hurdle, then stop or clear all retained earnings, so otherwise identical firms diverge. And firm value kinks at the threshold, bending convexly under threshold uncertainty, with a slope change equal to the distribution-tax rate, independent of return parameters. Residual income valuation survives; what fails is the sufficiency of aggregate book value, which conceals a priced state variable at the distribution margin.</p>
+                  <p class="keywords">Keywords: residual income valuation, equity composition, payout policy, capital allocation &middot; JEL: M41, G12, G32, G35</p>
+                </div>
+              </details>
+              <p class="paper-links"><a href="#" data-needs="equity-pdf">Download PDF</a></p>
+            </article>
+          </div>
+        </div>
+
+        <div>
+          <div class="group-label">Peer-reviewed publications</div>
+          <div class="papers">
+            <article class="paper">
+              <h3>Tax evasion savings versus unlawful predicate proceeds: a substance-based approach</h3>
+              <p class="authors">Deen Kemsley and Sean A. Kemsley</p>
+              <p class="cite"><em>Journal of Money Laundering Control</em>, 27(4), 2024, 647&ndash;657</p>
+              <details class="abs">
+                <summary>Abstract</summary>
+                <div class="abs-body">
+                  <p>Litigators, regulators and academics have long debated whether tax evasion savings qualify as unlawful proceeds for money laundering purposes. A common objection holds that tax evasion merely lets a bad actor keep money already on hand, rather than producing a new inflow of wealth. We test that objection by applying the substance-over-form principle together with the economic-substance and step-transaction doctrines.</p>
+                  <p>We find that in substance, tax evasion savings do qualify as unlawful proceeds: a dollar of evasion savings is substantively equivalent to a dollar of unlawful tax refund proceeds. Courts that value substance can therefore embrace the treatment, and the FATF could recommend it explicitly.</p>
+                </div>
+              </details>
+              <p class="paper-links"><a href="https://doi.org/10.1108/JMLC-12-2023-0196">Publisher version (DOI)</a></p>
+            </article>
+
+            <article class="paper">
+              <h3>Tax evasion on lawful income: is it a form of money laundering?</h3>
+              <p class="authors">Deen Kemsley, Sean A. Kemsley and Frank T. Morgan</p>
+              <p class="cite"><em>Journal of Financial Crime</em>, 31(1), 2024, 33&ndash;43</p>
+              <details class="abs">
+                <summary>Abstract</summary>
+                <div class="abs-body">
+                  <p>We ask whether income tax evasion also constitutes money laundering under a strict application of the Financial Action Task Force (FATF) Recommendations, including cases where an offender evades tax on lawful income. We apply the FATF conditions to the facts of <em>United States v. Walter Anderson</em>, in which the government alleged an attempt to evade $200 million of tax on lawful income.</p>
+                  <p>Anderson&rsquo;s actions met all of the FATF&rsquo;s conditions for money laundering, implying that tax evasion &mdash; even on lawful income &mdash; is a form of money laundering. We argue the FATF should formally recognize this and codify a single crime covering both offenses, which could simplify prosecution, eliminate overlapping statutes and reduce double jeopardy concerns.</p>
+                </div>
+              </details>
+              <p class="paper-links"><a href="https://doi.org/10.1108/JFC-11-2022-0268">Publisher version (DOI)</a></p>
+            </article>
+
+            <article class="paper">
+              <h3>Tax evasion and money laundering: a complete framework</h3>
+              <p class="authors">Deen Kemsley, Sean A. Kemsley and Frank T. Morgan</p>
+              <p class="cite"><em>Journal of Financial Crime</em>, 29(2), 2022, 589&ndash;602</p>
+              <details class="abs">
+                <summary>Abstract</summary>
+                <div class="abs-body">
+                  <p>The FATF designates tax evasion as a predicate offense for money laundering. We ask whether that designation is complete, or whether the connection between the two crimes is stronger. Applying the FATF definition of money laundering alongside accepted definitions of tax evasion and of a standard predicate offense, we identify the necessary conditions for each crime and use them to test opposing hypotheses about the nexus.</p>
+                  <p>Tax evasion does not meet the conditions for a standard predicate offense, and treating it as one is problematic in practice. Instead, the predicate label together with the methods and objectives of tax evasion implies that all tax evasion constitutes money laundering: in a single process, evasion generates criminal tax savings and launders those proceeds by concealing their unlawful origin.</p>
+                </div>
+              </details>
+              <p class="paper-links"><a href="https://doi.org/10.1108/JFC-09-2020-0175">Publisher version (DOI)</a></p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="teaching">
+  <div class="wrap section-grid">
+    <h2>Teaching</h2>
+    <div class="section-body">
+      <p class="lede">My teaching interests are in <strong>taxation</strong> and <strong>managerial accounting</strong>. I organize courses around evidence-based practices, emphasizing spaced review and active learning at the class, group, and individual level. I frame learning goals as skills to acquire rather than facts to learn, and focus on providing students with useful accounting toolkits they can carry with them into their careers. I strive to build connection, both with students and among them, because students engage more readily in a classroom where they feel known and supported.</p>
+
+      <div class="award">
+        <div class="award-label">Fred Moore Assistant Instructor Award for Teaching Excellence</div>
+        <p class="award-detail">Nominated by the Department of Accounting Executive Committee, 2026</p>
+      </div>
+
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-top">
+            <h3>Introduction to Managerial Accounting (ACC 312)</h3>
+            <span class="entry-when">2023</span>
+          </div>
+          <p class="entry-where">Instructor of record &middot; University of Texas at Austin</p>
+          <div class="rating"><b>4.46</b><span>Instructor rating &nbsp;/ 5.00</span></div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-top">
+            <h3>Introduction to Taxation &middot; Fundamentals of Taxation</h3>
+            <span class="entry-when">2022&ndash;2024</span>
+          </div>
+          <p class="entry-where">Teaching assistant &middot; University of Texas at Austin</p>
+          <p class="entry-note">For Andrew Belnap and Aruhn Venkat</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-top">
+            <h3>Chinese Language Instruction</h3>
+            <span class="entry-when">2017</span>
+          </div>
+          <p class="entry-where">Instructor &middot; Missionary Training Center, Provo, Utah</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="talks">
+  <div class="wrap section-grid">
+    <h2>Presentations</h2>
+    <div class="section-body">
+      <div class="talks">
+        <div class="talk"><span class="talk-name">Texas&ndash;Waterloo Tax Research Conference <sup>&dagger;</sup></span><span class="talk-year">2026</span></div>
+        <div class="talk"><span class="talk-name">Texas Lone Star Conference <sup>*</sup></span><span class="talk-year">2026</span></div>
+        <div class="talk"><span class="talk-name">McCombs PhD Conference <sup>*</sup></span><span class="talk-year">2025</span></div>
+        <div class="talk"><span class="talk-name">BYU Accounting Research Symposium <sup>*</sup></span><span class="talk-year">2025</span></div>
+        <div class="talk"><span class="talk-name">ATA Midyear Meeting <sup>*</sup></span><span class="talk-year">2025</span></div>
+        <div class="talk"><span class="talk-name">FARS Midyear Meeting <sup>*</sup></span><span class="talk-year">2025</span></div>
+        <div class="talk"><span class="talk-name">Texas&ndash;Waterloo Tax Research Conference</span><span class="talk-year">2024</span></div>
+        <div class="talk"><span class="talk-name">Accounting Theory Summer School</span><span class="talk-year">2024</span></div>
+        <div class="talk"><span class="talk-name">UNC Tax Symposium</span><span class="talk-year">2024</span></div>
+        <div class="talk"><span class="talk-name">UNC Tax Doctoral Consortium</span><span class="talk-year">2024</span></div>
+        <div class="talk"><span class="talk-name">Texas Tax Theory Seminar</span><span class="talk-year">2023, 2024</span></div>
+        <div class="talk"><span class="talk-name">Central Texas Tax Symposium</span><span class="talk-year">2023, 2024</span></div>
+      </div>
+      <p class="legend"><sup>*</sup> presenter &nbsp;&nbsp; <sup>&dagger;</sup> discussant</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="service">
+  <div class="wrap section-grid">
+    <h2>Service &amp; background</h2>
+    <div class="section-body">
+      <div class="svc">
+        <div class="svc-item">
+          <div class="svc-role">Ad hoc reviewer</div>
+          <p class="svc-detail"><em>Journal of the American Taxation Association</em> &middot; <em>Journal of Financial Crime</em> &middot; <em>Journal of Money Laundering Control</em> &middot; <em>Journal of International Accounting, Auditing and Taxation</em></p>
+        </div>
+        <div class="svc-item">
+          <div class="svc-role">Texas Tax Readings Group &middot; 2022&ndash;present</div>
+          <p class="svc-detail">Organizer and participant</p>
+        </div>
+        <div class="svc-item">
+          <div class="svc-role">Honors</div>
+          <p class="svc-detail">Nominee, Fred Moore Assistant Instructor Award for Teaching Excellence, 2026 &middot; Nominee, Deloitte Foundation Doctoral Fellowship Program, 2026 &middot; Nominee, GS University Graduate Continuing Fellowship, 2024</p>
+        </div>
+        <div class="svc-item">
+          <div class="svc-role">Education</div>
+          <p class="svc-detail">PhD in Accounting, University of Texas at Austin, expected 2027 &mdash; committee chair Braden M. Williams &middot; MS in Accounting, UT Austin, 2024 &middot; BS in Economics with an additional major in Mathematics, Brigham Young University, 2020, <em>magna cum laude</em></p>
+        </div>
+        <div class="svc-item">
+          <div class="svc-role">Before the PhD</div>
+          <p class="svc-detail">Financial Analyst and Senior Financial Analyst, BVA Group, Plano, Texas, 2020&ndash;2022</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>seankemsley.com &middot; McCombs School of Business &middot; Austin, Texas</span>
+    <span>Updated September 2026</span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sean Kemsley",
+  "givenName": "Sean",
+  "familyName": "Kemsley",
+  "url": "https://seankemsley.com/",
+  "image": "https://seankemsley.com/headshot.jpg",
+  "email": "mailto:sean.kemsley@mccombs.utexas.edu",
+  "jobTitle": "PhD Candidate in Accounting",
+  "description": "PhD candidate in accounting at the University of Texas at Austin studying taxation, with a focus on tax policy.",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "The University of Texas at Austin, McCombs School of Business"
+  },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "The University of Texas at Austin" },
+    { "@type": "CollegeOrUniversity", "name": "Brigham Young University" }
+  ],
+  "knowsAbout": ["Taxation", "Tax policy", "Corporate taxation", "Capital market effects of taxation", "Tax evasion", "Tax theory"],
+  "sameAs": [
+    "https://scholar.google.com/citations?user=hpX9VQ8AAAAJ&hl=en",
+    "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3544840"
+  ]
+}
+</script>
+
+</body>
+</html>
